@@ -3,8 +3,12 @@
 		"_postman_id": "d044dd80-cdb2-420c-bab7-d64890e047b3",
 		"name": "Dmoney_Users",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+<<<<<<< HEAD
 		"_exporter_id": "22815578",
 		"_collection_link": "https://orange-station-731402.postman.co/workspace/Course_Practice~815d8c63-e938-4000-af87-969353ba7bfc/collection/22815578-d044dd80-cdb2-420c-bab7-d64890e047b3?action=share&source=collection_link&creator=22815578"
+=======
+		"_exporter_id": "22815578"
+>>>>>>> 1a9769bb406c214b5a9425875dece87b4aacad9e
 	},
 	"item": [
 		{
@@ -151,6 +155,7 @@
 							"pm.test(\"Message Validation\",function(){\r",
 							"    pm.expect(jsonData.message).to.eql(\"Login successfully\")\r",
 							"\r",
+<<<<<<< HEAD
 							"});\r",
 							"\r",
 							"pm.test(\"Login User Role Verification\",function(){\r",
@@ -159,6 +164,11 @@
 						],
 						"type": "text/javascript",
 						"packages": {}
+=======
+							"});"
+						],
+						"type": "text/javascript"
+>>>>>>> 1a9769bb406c214b5a9425875dece87b4aacad9e
 					}
 				}
 			],
@@ -210,7 +220,10 @@
 							"    pm.expect(jsonData.message).contains('User list')\r",
 							"    console.log(jsonData.users[10].id)\r",
 							"    });\r",
+<<<<<<< HEAD
 							"    pm.environment.set(\"total_users\" ,jsonData.count)\r",
+=======
+>>>>>>> 1a9769bb406c214b5a9425875dece87b4aacad9e
 							"    break\r",
 							"\r",
 							"    case 401 :\r",
@@ -232,8 +245,12 @@
 							"\r",
 							""
 						],
+<<<<<<< HEAD
 						"type": "text/javascript",
 						"packages": {}
+=======
+						"type": "text/javascript"
+>>>>>>> 1a9769bb406c214b5a9425875dece87b4aacad9e
 					}
 				}
 			],
@@ -257,7 +274,12 @@
 				"header": [
 					{
 						"key": "Authorization",
+<<<<<<< HEAD
 						"value": "{{token}}"
+=======
+						"value": "{{token}}",
+						"type": "text"
+>>>>>>> 1a9769bb406c214b5a9425875dece87b4aacad9e
 					}
 				],
 				"url": {
@@ -370,8 +392,12 @@
 							"\r",
 							""
 						],
+<<<<<<< HEAD
 						"type": "text/javascript",
 						"packages": {}
+=======
+						"type": "text/javascript"
+>>>>>>> 1a9769bb406c214b5a9425875dece87b4aacad9e
 					}
 				}
 			],
@@ -405,7 +431,11 @@
 					}
 				],
 				"url": {
+<<<<<<< HEAD
 					"raw": "{{baseUrl}}/user/search/id/{{search_user_id}}",
+=======
+					"raw": "{{baseUrl}}/user/search/id/7",
+>>>>>>> 1a9769bb406c214b5a9425875dece87b4aacad9e
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -413,7 +443,11 @@
 						"user",
 						"search",
 						"id",
+<<<<<<< HEAD
 						"{{search_user_id}}"
+=======
+						"7"
+>>>>>>> 1a9769bb406c214b5a9425875dece87b4aacad9e
 					]
 				}
 			},
@@ -504,6 +538,54 @@
 			"response": []
 		},
 		{
+<<<<<<< HEAD
+=======
+			"name": "Search_Specific_User_Valid_Auth_&&_Without_Secret_Key",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Without secret key code validation\", function () {\r",
+							"    pm.response.to.have.status(403);\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json()\r",
+							"\r",
+							"pm.test(\"Message validation\",function(){\r",
+							"    pm.expect(jsonData.error.message).to.eql(\"Secret key missing!\")\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/user/search/id/7",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"search",
+						"id",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+>>>>>>> 1a9769bb406c214b5a9425875dece87b4aacad9e
 			"name": "Search_Specific_Invalid_User_ID",
 			"event": [
 				{
@@ -739,8 +821,12 @@
 							"\r",
 							""
 						],
+<<<<<<< HEAD
 						"type": "text/javascript",
 						"packages": {}
+=======
+						"type": "text/javascript"
+>>>>>>> 1a9769bb406c214b5a9425875dece87b4aacad9e
 					}
 				},
 				{
@@ -762,11 +848,21 @@
 							"pm.environment.set(\"nid\",nid)\r",
 							"pm.environment.set(\"password\",pass)\r",
 							"\r",
+<<<<<<< HEAD
 							"\r",
 							""
 						],
 						"type": "text/javascript",
 						"packages": {}
+=======
+							"// console.log(pm.environment.get(\"User_name\"))\r",
+							"// console.log(pm.environment.get(\"User_mail\"))\r",
+							"// console.log(pm.environment.get(\"phoneNumber\"))\r",
+							"// console.log(pm.environment.get(\"nid\"))\r",
+							""
+						],
+						"type": "text/javascript"
+>>>>>>> 1a9769bb406c214b5a9425875dece87b4aacad9e
 					}
 				}
 			],
@@ -1211,6 +1307,82 @@
 			"response": []
 		},
 		{
+<<<<<<< HEAD
+=======
+			"name": "Search_User_by_Phone_Number_Static",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"var jsonData = pm.response.json()\r",
+							"console.log(typeof(jsonData.user.phone_number))\r",
+							"\r",
+							"\r",
+							"pm.test(\"Status code validation\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response message validation\",function(){\r",
+							"    pm.expect(jsonData.message).to.eql(\"User found\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Phone number verification\",function(){\r",
+							"    pm.expect(jsonData.user.phone_number).to.eql(\"01686606909\")\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{token}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-AUTH-SECRET-KEY",
+						"value": "{{secret_key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/user/search/phonenumber/01686606909",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"search",
+						"phonenumber",
+						"01686606909"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+>>>>>>> 1a9769bb406c214b5a9425875dece87b4aacad9e
 			"name": "Search_User_by_Phone_Number_(Invalid_Number)",
 			"event": [
 				{
@@ -2971,12 +3143,17 @@
 							"    pm.expect(jsonData.error.message).to.contains(\"User not found\");\r",
 							"});"
 						],
+<<<<<<< HEAD
 						"type": "text/javascript",
 						"packages": {}
+=======
+						"type": "text/javascript"
+>>>>>>> 1a9769bb406c214b5a9425875dece87b4aacad9e
 					}
 				}
 			],
 			"request": {
+<<<<<<< HEAD
 				"method": "GET",
 				"header": [
 					{
@@ -2986,6 +3163,19 @@
 					{
 						"key": "X-AUTH-SECRET-KEY",
 						"value": "{{secret_key}}"
+=======
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-AUTH-SECRET-KEY",
+						"value": "{{secret_key}}",
+						"type": "text"
+>>>>>>> 1a9769bb406c214b5a9425875dece87b4aacad9e
 					}
 				],
 				"url": {
